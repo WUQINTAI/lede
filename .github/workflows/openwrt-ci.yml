@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-WR710v2-CI
+name: OpenWrt-WR710-CI
 
 on:
   push:
@@ -165,7 +165,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-webadmin=y
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
-         EOF
+          EOF
 
           # LuCI主题:
           cat >> .config <<EOF
