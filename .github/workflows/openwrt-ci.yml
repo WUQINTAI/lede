@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-WR710-CI
+name: OpenWrt-respi-CI
 
 on:
   push:
@@ -101,9 +101,9 @@ jobs:
 
           # 编译x64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_ar71xx=y
-          CONFIG_TARGET_ar71xx_generic=y
-          CONFIG_TARGET_ar71xx_generic_DEVICE_tl-wr710n-v2.1=y
+          CONFIG_TARGET_brcm2708=y
+          CONFIG_TARGET_brcm2708_bcm2710=y
+          CONFIG_TARGET_brcm2708_bcm2710_DEVICE_rpi-3=y
           EOF
 
           # 固件压缩:
