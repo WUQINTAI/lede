@@ -9,7 +9,7 @@
 
 name: OpenWrt-wr710n-zidingyi-CI
 
-on:
+#on:
   push:
     branches: 
       - master
