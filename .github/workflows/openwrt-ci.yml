@@ -7,9 +7,9 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-wr710n-zidingyi-CI
+name: OpenWrt-X86-CI
 
-#on:
+on:
   push:
     branches: 
       - master
@@ -92,9 +92,10 @@ jobs:
           mkdir -p ./artifact/
           find ./bin/targets/ -name "*.img*" | xargs -i mv -f {} ./artifact/
           find ./bin/targets/ -name "*.bin*" | xargs -i mv -f {} ./artifact/
+          find ./bin/targets/ -name "*.vmdk*" | xargs -i mv -f {} ./artifact/
 
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt-firmware-wr710n-zdy
+          name: OpenWrt-firmware-x86
           path: ./artifact/
