@@ -7,12 +7,12 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-wr710n-new-20200220-CI
+name: OpenWrt-wr710n-zidingyi-CI
 
-#on:
-#  push:
-#    branches: 
-#      - master
+on:
+  push:
+    branches: 
+      - master
   # schedule:
   #   - cron: 0 20 * * *
   # release:
@@ -96,5 +96,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware-wr710n
+          name: OpenWrt-firmware-wr710n-zdy
           path: ./artifact/
