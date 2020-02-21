@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-X86-CI
+name: OpenWrt-WR710N-V1-CI
 
 on:
   push:
@@ -97,5 +97,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt-firmware-x86
+          name: OpenWrt-firmware-WR740-V1
           path: ./artifact/
