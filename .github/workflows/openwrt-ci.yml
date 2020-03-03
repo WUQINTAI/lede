@@ -7,10 +7,10 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-WR710N-V1-update-CI
+name: Make-raspberry-pi-3b-fireware
 
-#on:
- # push:
+on:
+  push:
     branches: 
       - master
   # schedule:
@@ -97,5 +97,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt-firmware-WR740-V1-update
+          name: OpenWrt-firmware-raspberry-pi-3b
           path: ./artifact/
