@@ -9,7 +9,7 @@
 
 name: Make-raspberry-pi-3b-fireware-base
 
-#on:
+on:
   push:
     branches: 
       - master
@@ -97,5 +97,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt-firmware-raspberry-pi-3b
+          name: OpenWrt-firmware-raspberry-pi-3b-base
           path: ./artifact/
