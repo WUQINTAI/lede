@@ -7,9 +7,9 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: Make-raspberry-pi-3b-fireware
+name: Make-raspberry-pi-3b-fireware-base
 
-on:
+#on:
   push:
     branches: 
       - master
