@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-CI
+name: OpenWrt-CI-Respberry-3B-base
 
 on:
   push:
@@ -70,8 +70,10 @@ jobs:
 
       - name: Compile firmware
         run: |
-          echo -e "$(nproc) thread build."
-          make -j$(nproc) V=s
+          make -j1 V=s
+#          echo -e "$(nproc) thread build."
+#          make -j$(nproc) V=s
+
 
       - name: Assemble artifact
         run: |
@@ -84,5 +86,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware
+          name: OpenWrt firmware Respberry 3
           path: ./artifact/
